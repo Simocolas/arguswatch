@@ -1,0 +1,219 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 272" role="img" aria-label="EchoCore AI Sentinel — observation aerostat">
+  <defs>
+
+    <!-- Body: top-lit cool grey-blue, darker belly -->
+    <linearGradient id="g-body" x1="234" y1="16" x2="234" y2="202"
+                    gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#9dc0d8"/>
+      <stop offset="28%"  stop-color="#6e91a8"/>
+      <stop offset="100%" stop-color="#364f62"/>
+    </linearGradient>
+
+    <!-- Diffuse highlight on upper-forward quadrant -->
+    <radialGradient id="g-highlight" cx="62%" cy="26%" r="52%">
+      <stop offset="0%"   stop-color="#dff0fa" stop-opacity="0.58"/>
+      <stop offset="100%" stop-color="#dff0fa" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Warm amber porthole glow -->
+    <radialGradient id="g-port" cx="50%" cy="44%" r="50%">
+      <stop offset="0%"   stop-color="#fff4c0" stop-opacity="0.97"/>
+      <stop offset="50%"  stop-color="#eec040" stop-opacity="0.88"/>
+      <stop offset="100%" stop-color="#9a5a14" stop-opacity="0.18"/>
+    </radialGradient>
+
+    <!-- Gondola: near-black with slight blue tint -->
+    <linearGradient id="g-gondola" x1="0" y1="220" x2="0" y2="250"
+                    gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#4c5e70"/>
+      <stop offset="100%" stop-color="#1e2a34"/>
+    </linearGradient>
+
+    <!-- Soft under-body shadow on ground -->
+    <radialGradient id="g-shadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#030810" stop-opacity="0.48"/>
+      <stop offset="100%" stop-color="#030810" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Subtle glow for cyan elements -->
+    <filter id="f-glow" x="-25%" y="-25%" width="150%" height="150%"
+            color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- Clip to body ellipse shape -->
+    <clipPath id="c-body">
+      <ellipse cx="234" cy="109" rx="174" ry="93"/>
+    </clipPath>
+
+    <!-- Diagonal hatch panel lines on body surface -->
+    <pattern id="p-panels" x="0" y="0" width="44" height="44"
+             patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0"  x2="44" y2="44" stroke="#7898b2" stroke-width="0.42" opacity="0.2"/>
+      <line x1="0" y1="22" x2="22" y2="44" stroke="#7898b2" stroke-width="0.28" opacity="0.12"/>
+    </pattern>
+
+    <!-- Fine grid for gondola sensor panels -->
+    <pattern id="p-grid" x="0" y="0" width="14" height="11"
+             patternUnits="userSpaceOnUse">
+      <line x1="14" y1="0"  x2="14" y2="11" stroke="#48616e" stroke-width="0.65"/>
+      <line x1="0"  y1="11" x2="14" y2="11" stroke="#48616e" stroke-width="0.65"/>
+    </pattern>
+
+  </defs>
+
+  <!-- ── Ground shadow (subtle ambient) ──────────────────── -->
+  <ellipse cx="240" cy="265" rx="160" ry="10" fill="url(#g-shadow)"/>
+
+  <!-- ════════════════════════════════════════════════════════
+       TAIL FINS  (drawn first — body paints over overlaps)
+       ════════════════════════════════════════════════════════ -->
+
+  <!-- Upper stabiliser fin -->
+  <path d="M 74,86 C 50,60 24,42 6,34 C 18,58 44,78 62,88 Z"
+        fill="#507090" opacity="0.92"/>
+  <!-- Upper fin leading-edge highlight -->
+  <path d="M 74,86 C 50,60 24,42 6,34"
+        fill="none" stroke="#7aa0bc" stroke-width="0.9" stroke-opacity="0.5"/>
+
+  <!-- Lower stabiliser fin -->
+  <path d="M 74,132 C 50,158 24,176 6,184 C 18,160 44,140 62,130 Z"
+        fill="#507090" opacity="0.92"/>
+
+  <!-- Dorsal fin (small, top-rear — adds aeronautical silhouette depth) -->
+  <path d="M 80,80 C 64,54 48,38 36,32 C 46,52 62,70 74,82 Z"
+        fill="#507090" opacity="0.78"/>
+
+  <!-- ════════════════════════════════════════════════════════
+       MAIN BODY
+       ════════════════════════════════════════════════════════ -->
+
+  <!-- Base fill -->
+  <ellipse cx="234" cy="109" rx="174" ry="93" fill="url(#g-body)"/>
+
+  <!-- Diagonal panel texture (clipped inside body) -->
+  <ellipse cx="234" cy="109" rx="174" ry="93"
+           fill="url(#p-panels)" clip-path="url(#c-body)"/>
+
+  <!-- Top-quadrant diffuse highlight -->
+  <ellipse cx="292" cy="64" rx="148" ry="60"
+           fill="url(#g-highlight)" clip-path="url(#c-body)"/>
+
+  <!-- ── Cyan equatorial accent stripe ──────────────────── -->
+  <!-- Bloom layer (wide soft glow) -->
+  <path d="M 60,109 C 100,107 170,105 234,105 C 302,105 372,107 408,109"
+        fill="none" stroke="#5ce0d8" stroke-width="8" stroke-opacity="0.10"
+        clip-path="url(#c-body)"/>
+  <!-- Core line (crisp) -->
+  <path d="M 60,109 C 100,107 170,105 234,105 C 302,105 372,107 408,109"
+        fill="none" stroke="#5ce0d8" stroke-width="1.7" stroke-opacity="0.74"
+        clip-path="url(#c-body)" filter="url(#f-glow)"/>
+
+  <!-- Body shell outline (dark underside) -->
+  <ellipse cx="234" cy="109" rx="174" ry="93"
+           fill="none" stroke="#28404e" stroke-width="1.2"/>
+  <!-- Top specular edge arc -->
+  <path d="M 60,109 A 174,93 0 0 1 408,109"
+        fill="none" stroke="#90b8cc" stroke-width="0.9" stroke-opacity="0.38"/>
+
+  <!-- ── Subtle longitudinal seam lines (tech panel segmentation) -->
+  <path d="M 115,22 C 180,16 290,16 360,28"
+        fill="none" stroke="#7898b0" stroke-width="0.5" stroke-opacity="0.22"
+        clip-path="url(#c-body)"/>
+  <path d="M 115,196 C 180,202 290,202 360,190"
+        fill="none" stroke="#2a3e4e" stroke-width="0.5" stroke-opacity="0.22"
+        clip-path="url(#c-body)"/>
+
+  <!-- ════════════════════════════════════════════════════════
+       PORTHOLE / OBSERVATION WINDOW
+       ════════════════════════════════════════════════════════ -->
+
+  <!-- Bezel recess -->
+  <circle cx="320" cy="109" r="29" fill="#192838"/>
+  <!-- Precision tech ring (cyan, glowing) -->
+  <circle cx="320" cy="109" r="29"
+          fill="none" stroke="#5ce0d8" stroke-width="2.1"
+          stroke-opacity="0.88" filter="url(#f-glow)"/>
+  <!-- Cardinal tick marks (instrument aesthetic) -->
+  <line x1="320" y1="80"  x2="320" y2="75"  stroke="#5ce0d8" stroke-width="1.6" stroke-opacity="0.72"/>
+  <line x1="320" y1="138" x2="320" y2="143" stroke="#5ce0d8" stroke-width="1.6" stroke-opacity="0.72"/>
+  <line x1="291" y1="109" x2="286" y2="109" stroke="#5ce0d8" stroke-width="1.6" stroke-opacity="0.72"/>
+  <line x1="349" y1="109" x2="354" y2="109" stroke="#5ce0d8" stroke-width="1.6" stroke-opacity="0.72"/>
+  <!-- Inner warm glass -->
+  <circle cx="320" cy="109" r="21" fill="url(#g-port)"/>
+  <!-- Lens flare specular -->
+  <ellipse cx="311" cy="100" rx="6.5" ry="4"
+           fill="rgba(255,255,255,0.54)" transform="rotate(-22,311,100)"/>
+
+  <!-- ════════════════════════════════════════════════════════
+       GONDOLA  (suspended sensor housing)
+       ════════════════════════════════════════════════════════ -->
+
+  <!-- Suspension cables (thin, precise) -->
+  <line x1="190" y1="201" x2="176" y2="220"
+        stroke="#7898a8" stroke-width="1.25" stroke-opacity="0.9"/>
+  <line x1="234" y1="202" x2="234" y2="220"
+        stroke="#7898a8" stroke-width="1.25" stroke-opacity="0.9"/>
+  <line x1="278" y1="201" x2="292" y2="220"
+        stroke="#7898a8" stroke-width="1.25" stroke-opacity="0.9"/>
+
+  <!-- Main housing body -->
+  <rect x="162" y="220" width="148" height="30" rx="5" fill="url(#g-gondola)"/>
+  <!-- Grid sensor panel overlay -->
+  <rect x="162" y="220" width="148" height="30" rx="5"
+        fill="url(#p-grid)" opacity="0.52"/>
+  <!-- Top accent rail -->
+  <rect x="162" y="220" width="148" height="3.5" rx="2.5" fill="#587888" opacity="0.95"/>
+
+  <!-- Left end — forward-facing aperture -->
+  <rect x="162" y="220" width="22" height="30" rx="4" fill="#141e28"/>
+  <!-- Outer lens ring -->
+  <circle cx="173" cy="235" r="8.5" fill="#0c1620"/>
+  <!-- Inner optic layers -->
+  <circle cx="173" cy="235" r="6"   fill="#183040"/>
+  <circle cx="173" cy="235" r="3.5" fill="#2a4860"/>
+  <!-- Aperture glow -->
+  <circle cx="173" cy="235" r="2"   fill="#5ce0d8" opacity="0.74"
+          filter="url(#f-glow)"/>
+
+  <!-- Right end — telemetry/comms cluster -->
+  <rect x="288" y="220" width="22" height="30" rx="4" fill="#141e28"/>
+  <circle cx="299" cy="231" r="3.2" fill="#5ce0d8" opacity="0.58"/>
+  <circle cx="299" cy="241" r="2.6" fill="#5ce0d8" opacity="0.38"/>
+
+  <!-- Bottom passive sensing dome (EO/IR/RF) -->
+  <ellipse cx="234" cy="250" rx="26" ry="9"   fill="#0e181e"/>
+  <ellipse cx="234" cy="249" rx="19" ry="7"   fill="#1c3248"/>
+  <ellipse cx="234" cy="248" rx="12" ry="5"   fill="#2a4868"/>
+  <circle  cx="234" cy="247" r="3.5" fill="#5ce0d8" opacity="0.50"
+           filter="url(#f-glow)"/>
+
+  <!-- Gondola shell outline -->
+  <rect x="162" y="220" width="148" height="30" rx="5"
+        fill="none" stroke="#2c3e4c" stroke-width="0.82"/>
+
+  <!-- ── Antenna nubs ──────────────────────────────────── -->
+  <line x1="200" y1="220" x2="200" y2="210" stroke="#7898a8" stroke-width="1.25"/>
+  <circle cx="200" cy="209" r="2.2" fill="#5ce0d8"
+          filter="url(#f-glow)" opacity="0.88"/>
+  <line x1="272" y1="220" x2="272" y2="211" stroke="#7898a8" stroke-width="1.25"/>
+  <circle cx="272" cy="210" r="2.2" fill="#5ce0d8"
+          filter="url(#f-glow)" opacity="0.72"/>
+
+  <!-- ════════════════════════════════════════════════════════
+       NOSE DETAILS  (rightmost, forward-facing)
+       ════════════════════════════════════════════════════════ -->
+
+  <!-- Nav beacon ring -->
+  <circle cx="405" cy="109" r="5.5" fill="#182838"/>
+  <circle cx="405" cy="109" r="5.5"
+          fill="none" stroke="#5ce0d8" stroke-width="1.4"
+          stroke-opacity="0.84" filter="url(#f-glow)"/>
+  <circle cx="405" cy="109" r="2.2" fill="#5ce0d8" opacity="0.68"/>
+
+  <!-- ── Fin-tip nav lights (anti-collision red) ───────── -->
+  <circle cx="8" cy="34"  r="3" fill="#e03030" opacity="0.82"/>
+  <circle cx="8" cy="184" r="3" fill="#e03030" opacity="0.82"/>
+
+</svg>
