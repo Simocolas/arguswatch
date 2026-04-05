@@ -306,21 +306,29 @@
           <div class="pillar reveal" data-delay="0.12">
             <span class="pillar-num">01</span>
             <div class="pillar-body">
-              <h3 class="pillar-title">Top-down geometry eliminates clutter</h3>
-              <p class="pillar-text">Ground clutter has zero Doppler shift from above. Static terrain, buildings, and parked vehicles are all invisible in Doppler space. A moving UAV stands out immediately, regardless of RF emissions.</p>
+              <h3 class="pillar-title">Top-down geometry reduces clutter fundamentally</h3>
+              <p class="pillar-text">Ground clutter is nearly stationary. From elevation, static terrain, buildings, and parked vehicles sit at near-zero Doppler — Moving Target Indication (MTI) filters them out. A moving UAV breaks that Doppler silence and stands out, regardless of RF emissions. This is the same physical principle that has made airborne downward-looking radar operationally effective for over 40 years.</p>
             </div>
           </div>
 
           <div class="pillar reveal" data-delay="0.26">
             <span class="pillar-num">02</span>
             <div class="pillar-body">
-              <h3 class="pillar-title">MTI filtering made clean</h3>
-              <p class="pillar-text">Moving Target Indication works perfectly from elevation. The platform sees only what moves. Birds, UAVs, and aircraft separate cleanly in the micro-Doppler domain.</p>
+              <h3 class="pillar-title">MTI filtering is more tractable from elevation</h3>
+              <p class="pillar-text">Ground-based MTI fights shallow-angle clutter and terrain masking. From elevation, static ground returns concentrate near zero Doppler, and moving aerial targets stand out against a more predictable background. Micro-Doppler then separates rotor harmonics from bird wingbeats. The problem is not solved — it is made more tractable.</p>
             </div>
           </div>
 
           <div class="pillar reveal" data-delay="0.4">
             <span class="pillar-num">03</span>
+            <div class="pillar-body">
+              <h3 class="pillar-title">Proven platform concept. Not a new experiment.</h3>
+              <p class="pillar-text">Tethered aerostat radar is not a novel idea. The U.S. Tethered Aerostat Radar System (TARS) has operated continuously since 1978 — eight sites along the U.S.-Mexico border, each carrying a downward-looking radar at up to 15,000 ft AGL, detecting low-altitude targets that ground radar misses due to terrain masking. (Source: Wikipedia TARS / CBP Official)<br><br>QinetiQ's current commercial aerostat platform explicitly supports Class I/II/III UAV detection with radar payloads at 15,000 ft. (Source: QinetiQ Aerostat Solutions)<br><br>EchoCore is building a modern, smaller-scale, UAS-optimized implementation of a concept with four decades of operational proof.</p>
+            </div>
+          </div>
+
+          <div class="pillar reveal" data-delay="0.4">
+            <span class="pillar-num">04</span>
             <div class="pillar-body">
               <h3 class="pillar-title">Patrol + station dual mode</h3>
               <p class="pillar-text">Tethered: infinite endurance, ground power, 24/7 persistent coverage. Untethered: active patrol, extending coverage from 10&nbsp;km to 30&nbsp;km+ radius as the platform repositions.</p>
@@ -328,23 +336,23 @@
           </div>
 
           <div class="pillar reveal" data-delay="0.54">
-            <span class="pillar-num">04</span>
+            <span class="pillar-num">05</span>
             <div class="pillar-body">
               <h3 class="pillar-title">Low cost, high endurance</h3>
-              <p class="pillar-text">Compared to fixed-wing ISR aircraft or satellite surveillance, the platform cost is a fraction. Helium lift is free. Tethered power eliminates battery limits. A single platform can maintain station for weeks, not hours.</p>
+              <p class="pillar-text">Compared to fixed-wing ISR aircraft or satellite surveillance, the platform cost is a fraction. Helium-sustained lift eliminates fuel burn and dramatically reduces operating costs compared to fixed-wing ISR platforms. Tethered power eliminates battery limits. A single platform can maintain station for weeks, not hours.</p>
             </div>
           </div>
 
           <div class="pillar reveal" data-delay="0.68">
-            <span class="pillar-num">05</span>
+            <span class="pillar-num">06</span>
             <div class="pillar-body">
               <h3 class="pillar-title">Altitude advantage over FPV threats</h3>
-              <p class="pillar-text">Commercial FPV drones and threat UAVs typically operate below 500m AGL. The surveillance platform operates at 500–3000m, above the threat envelope, outside effective FPV range, and with unobstructed sightlines across the full surveillance zone.</p>
+              <p class="pillar-text">Commercial FPV drones and threat UAVs typically operate below 500m AGL. The surveillance platform operates at 500–3000m, above the typical threat envelope, with unobstructed sightlines across the full surveillance zone.</p>
             </div>
           </div>
 
           <div class="pillar reveal" data-delay="0.82">
-            <span class="pillar-num">06</span>
+            <span class="pillar-num">07</span>
             <div class="pillar-body">
               <h3 class="pillar-title">Optional interceptor carriage</h3>
               <p class="pillar-text">The platform can carry or coordinate small interceptor UAVs in its gondola bay. Upon positive identification of a threat, interceptors can be launched directly from altitude, reducing response time from minutes to seconds.</p>
@@ -596,6 +604,69 @@
 
           </svg>
         </div><!-- /.solution-diagram-wrap -->
+
+        <!-- Mobile: vertical altitude zone diagram (hidden on desktop) -->
+        <div class="solution-diagram-mobile">
+          <svg class="solution-diagram-mobile-svg" viewBox="0 0 400 310" fill="none"
+               role="img" aria-label="Altitude zones: surveillance platform above FPV threat envelope above ground clutter">
+            <!-- Zone fills -->
+            <rect x="0" y="0"   width="280" height="100" fill="#5ce0d8" fill-opacity="0.05"/>
+            <rect x="0" y="100" width="280" height="105" fill="#e8c06a" fill-opacity="0.07"/>
+            <rect x="0" y="205" width="280" height="80"  fill="#060c18" fill-opacity="0.55"/>
+
+            <!-- Zone separator lines -->
+            <line x1="0" y1="100" x2="280" y2="100"
+                  stroke="#5ce0d8" stroke-width="0.7" stroke-dasharray="4 3" stroke-opacity="0.30"/>
+            <line x1="0" y1="205" x2="280" y2="205"
+                  stroke="#e8c06a" stroke-width="0.7" stroke-dasharray="4 3" stroke-opacity="0.30"/>
+            <line x1="0" y1="280" x2="280" y2="280"
+                  stroke="#4a5e70" stroke-width="1.1" stroke-opacity="0.65"/>
+
+            <!-- Band 1 labels -->
+            <text x="10" y="16"  font-family="monospace" font-size="11" fill="#5ce0d8" fill-opacity="0.88">SURVEILLANCE PLATFORM</text>
+            <text x="10" y="30"  font-family="monospace" font-size="11" fill="#5ce0d8" fill-opacity="0.88">500–3000m AGL</text>
+            <text x="10" y="91"  font-family="monospace" font-size="8.5" fill="#5ce0d8" fill-opacity="0.42">Days to weeks · Tethered power</text>
+
+            <!-- Aerostat icon — top right of band 1 -->
+            <ellipse cx="244" cy="48" rx="26" ry="11" fill="#3a5a70" stroke="#5ce0d8" stroke-width="1.2" stroke-opacity="0.82"/>
+            <circle  cx="254" cy="48" r="5"  fill="#192838" stroke="#5ce0d8" stroke-width="1.2" stroke-opacity="0.82"/>
+            <ellipse cx="244" cy="59" rx="10" ry="4" fill="#0e181e"/>
+            <circle  cx="244" cy="59" r="2.2" fill="#5ce0d8" fill-opacity="0.52"/>
+
+            <!-- Band 2 labels -->
+            <text x="10" y="117" font-family="monospace" font-size="11" fill="#e8c06a" fill-opacity="0.82">FPV / THREAT UAV ENVELOPE</text>
+            <text x="10" y="197" font-family="monospace" font-size="8.5" fill="#e8c06a" fill-opacity="0.42">Typical threat altitude, below platform</text>
+
+            <!-- Drone icon — right of band 2 -->
+            <g transform="translate(248,152)">
+              <rect x="-5" y="-3" width="10" height="6" rx="2" fill="#e8c06a" fill-opacity="0.40"/>
+              <line x1="-5" y1="0" x2="-13" y2="-8" stroke="#e8c06a" stroke-width="0.9" stroke-opacity="0.38"/>
+              <line x1="5"  y1="0" x2="13"  y2="-8" stroke="#e8c06a" stroke-width="0.9" stroke-opacity="0.38"/>
+              <line x1="-5" y1="0" x2="-13" y2="8"  stroke="#e8c06a" stroke-width="0.9" stroke-opacity="0.38"/>
+              <line x1="5"  y1="0" x2="13"  y2="8"  stroke="#e8c06a" stroke-width="0.9" stroke-opacity="0.38"/>
+            </g>
+
+            <!-- Band 3 labels -->
+            <text x="10" y="222" font-family="monospace" font-size="11" fill="#d84040" fill-opacity="0.62">GROUND CLUTTER ZONE</text>
+            <text x="10" y="271" font-family="monospace" font-size="8.5" fill="#d84040" fill-opacity="0.42">Radar-challenged from below</text>
+
+            <!-- Altitude scale — right edge -->
+            <line x1="296" y1="0"   x2="296" y2="280" stroke="#4a5e70" stroke-width="0.8" stroke-opacity="0.60"/>
+            <!-- 3000m -->
+            <line x1="292" y1="0"   x2="300" y2="0"   stroke="#5ce0d8" stroke-width="0.9" stroke-opacity="0.62"/>
+            <text x="304" y="4"   font-family="monospace" font-size="9" fill="#5ce0d8" fill-opacity="0.68">3000m</text>
+            <!-- 500m -->
+            <line x1="292" y1="100" x2="300" y2="100" stroke="#5ce0d8" stroke-width="0.9" stroke-opacity="0.55"/>
+            <text x="304" y="104" font-family="monospace" font-size="9" fill="#5ce0d8" fill-opacity="0.55">500m</text>
+            <!-- 100m -->
+            <line x1="292" y1="205" x2="300" y2="205" stroke="#e8c06a" stroke-width="0.9" stroke-opacity="0.55"/>
+            <text x="304" y="209" font-family="monospace" font-size="9" fill="#e8c06a" fill-opacity="0.55">100m</text>
+            <!-- 0m -->
+            <line x1="292" y1="280" x2="300" y2="280" stroke="#4a5e70" stroke-width="0.9" stroke-opacity="0.60"/>
+            <text x="304" y="284" font-family="monospace" font-size="9" fill="#8a9aaa" fill-opacity="0.65">0m</text>
+            <text x="288" y="302" font-family="monospace" font-size="8"  fill="#4a5e70" fill-opacity="0.55">AGL</text>
+          </svg>
+        </div><!-- /.solution-diagram-mobile -->
 
       </div><!-- /.solution-layout -->
     </div><!-- /.solution-inner -->
@@ -915,8 +986,84 @@
         </svg>
       </div><!-- /.pipeline-diagram-wrap -->
 
+      <!-- Mobile: vertical step list (hidden on desktop) -->
+      <div class="pipeline-mobile" aria-label="AI classification pipeline steps">
+
+        <div class="pipeline-step pipeline-step--signal">
+          <span class="pipeline-step-num">01</span>
+          <div class="pipeline-step-content">
+            <p class="pipeline-step-name">Raw I/Q Samples</p>
+            <p class="pipeline-step-desc">Signal acquisition · ADC 100+ Msps · complex baseband</p>
+          </div>
+        </div>
+        <div class="pipeline-step-arrow" aria-hidden="true">↓</div>
+
+        <div class="pipeline-step pipeline-step--signal">
+          <span class="pipeline-step-num">02</span>
+          <div class="pipeline-step-content">
+            <p class="pipeline-step-name">Range Processing</p>
+            <p class="pipeline-step-desc">Pulse compression · CFAR · MTI filter</p>
+          </div>
+        </div>
+        <div class="pipeline-step-arrow" aria-hidden="true">↓</div>
+
+        <div class="pipeline-step pipeline-step--signal">
+          <span class="pipeline-step-num">03</span>
+          <div class="pipeline-step-content">
+            <p class="pipeline-step-name">Time-Freq Transforms</p>
+            <p class="pipeline-step-desc">Range-Doppler map · 2D FFT · ~0.5 m/s bin</p>
+          </div>
+        </div>
+        <div class="pipeline-step-arrow" aria-hidden="true">↓</div>
+
+        <div class="pipeline-step pipeline-step--highlight">
+          <span class="pipeline-step-num">04</span>
+          <div class="pipeline-step-content">
+            <p class="pipeline-step-name">Micro-Doppler Spectrogram</p>
+            <p class="pipeline-step-desc">STFT · blade harmonics · JEM signatures · 10–80 ms windows</p>
+          </div>
+        </div>
+        <div class="pipeline-step-arrow" aria-hidden="true">↓</div>
+
+        <div class="pipeline-step pipeline-step--signal">
+          <span class="pipeline-step-num">05</span>
+          <div class="pipeline-step-content">
+            <p class="pipeline-step-name">Feature Extraction</p>
+            <p class="pipeline-step-desc">RCS statistics · Doppler harmonics · spectral entropy</p>
+          </div>
+        </div>
+        <div class="pipeline-step-arrow" aria-hidden="true">↓</div>
+
+        <div class="pipeline-step pipeline-step--cls">
+          <span class="pipeline-step-num">06</span>
+          <div class="pipeline-step-content">
+            <p class="pipeline-step-name">Classifier Ensemble</p>
+            <p class="pipeline-step-desc">SVM · CNN · Platt scaling · confidence calibration</p>
+          </div>
+        </div>
+        <div class="pipeline-step-arrow" aria-hidden="true">↓</div>
+
+        <div class="pipeline-step pipeline-step--out">
+          <span class="pipeline-step-num">07</span>
+          <div class="pipeline-step-content">
+            <p class="pipeline-step-name">Decision Fusion</p>
+            <p class="pipeline-step-desc">Bayesian · Dempster-Shafer · multi-hypothesis tracking</p>
+          </div>
+        </div>
+        <div class="pipeline-step-arrow" aria-hidden="true">↓</div>
+
+        <div class="pipeline-step pipeline-step--out">
+          <span class="pipeline-step-num">08</span>
+          <div class="pipeline-step-content">
+            <p class="pipeline-step-name">C2 Output</p>
+            <p class="pipeline-step-desc">CoT / SAPIENT / ATAK · geo-referenced tracks</p>
+          </div>
+        </div>
+
+      </div><!-- /.pipeline-mobile -->
+
       <p class="pipeline-footnote reveal" data-delay="0.48">
-        Classification accuracy on micro-Doppler spectrograms: &gt;95% UAV vs. bird (published benchmark, X-band, DJI Phantom class targets). Pipeline architecture follows DRDC CUAS signal processing doctrine.
+        Classification accuracy on micro-Doppler spectrograms: &gt;95% UAV vs. bird (published benchmark, side-looking geometry, X-band, DJI Phantom class targets). Top-down geometry validation in progress. Pipeline architecture follows DRDC CUAS signal processing doctrine.
       </p>
 
       <!-- Stats row -->
@@ -1139,6 +1286,31 @@
         Meets DND Sentinel Shield essential requirements: 10 km coverage · 24/7 continuous ·
         RF-silent capable · C2 interoperable
       </p>
+
+      <!-- Mobile: simple range ellipse (hidden on desktop) -->
+      <svg class="coverage-mobile-ellipse" viewBox="0 0 300 150" fill="none"
+           role="img" aria-label="Coverage range ellipses: 10 km and 30 km radius">
+        <!-- Radar pulse rings (reuse animation class) -->
+        <ellipse class="rdr-ring" cx="150" cy="105" rx="118" ry="34"
+                 stroke="#5ce0d8" stroke-width="1.4" style="animation-delay:0s"/>
+        <ellipse class="rdr-ring" cx="150" cy="105" rx="118" ry="34"
+                 stroke="#5ce0d8" stroke-width="1.4" style="animation-delay:-1.33s"/>
+        <ellipse class="rdr-ring" cx="150" cy="105" rx="118" ry="34"
+                 stroke="#5ce0d8" stroke-width="1.4" style="animation-delay:-2.67s"/>
+        <!-- Static range ellipses -->
+        <ellipse cx="150" cy="105" rx="65" ry="19"
+                 stroke="rgba(242,237,230,0.20)" stroke-width="1"/>
+        <ellipse cx="150" cy="105" rx="118" ry="34"
+                 stroke="rgba(242,237,230,0.13)" stroke-width="1"/>
+        <!-- Platform dot + tether line -->
+        <circle cx="150" cy="38" r="4" fill="#5ce0d8" fill-opacity="0.65"/>
+        <line x1="150" y1="42" x2="150" y2="105"
+              stroke="#5ce0d8" stroke-width="0.7" stroke-dasharray="3 4" stroke-opacity="0.28"/>
+        <!-- Labels -->
+        <text x="218" y="101" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.78)" letter-spacing="0.04em">10 km</text>
+        <text x="270" y="101" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.65)" letter-spacing="0.04em">30 km</text>
+      </svg>
+
     </div>
 
   </section>
@@ -1354,7 +1526,7 @@
       </div><!-- /.roadmap-timeline -->
 
       <p class="roadmap-callout reveal" data-delay="0.55">
-        "The sensors exist. The algorithms are being built. The platform is commercial off-the-shelf. This is an integration challenge, not a research gamble."
+        "The platform concept has 40 years of operational precedent. The sensors exist. The algorithms are being built. This is a modern, UAS-optimized integration — not a speculative architecture."
       </p>
 
       <p class="roadmap-cred reveal" data-delay="0.62">
