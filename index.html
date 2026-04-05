@@ -197,7 +197,7 @@
         <span>Eyes Above.</span>
         <span>Always.</span>
       </h1>
-      <p class="hero-subtitle">A high-altitude multi-modal surveillance platform detecting silent, emission-free UAVs that evade ground-based systems.</p>
+      <p class="hero-subtitle">An elevated multi-modal sensing architecture designed to detect silent, emission-free UAVs that evade ground-based radar. Built for the DND Sentinel Shield challenge.</p>
       <div class="hero-badge">
         <span>CA Patent Application · No.&nbsp;3,286,560</span>
       </div>
@@ -335,6 +335,8 @@
             </div>
           </div>
 
+          <p class="section-label reveal" data-delay="0.47" style="margin: 2rem 0 1rem;">OPERATIONAL ARCHITECTURE · Subject to flight validation</p>
+
           <div class="pillar reveal" data-delay="0.54">
             <span class="pillar-num">05</span>
             <div class="pillar-body">
@@ -348,14 +350,6 @@
             <div class="pillar-body">
               <h3 class="pillar-title">Altitude advantage over FPV threats</h3>
               <p class="pillar-text">Commercial FPV drones and threat UAVs typically operate below 500m AGL. The surveillance platform operates at 500–3000m, above the typical threat envelope, with unobstructed sightlines across the full surveillance zone.</p>
-            </div>
-          </div>
-
-          <div class="pillar reveal" data-delay="0.82">
-            <span class="pillar-num">07</span>
-            <div class="pillar-body">
-              <h3 class="pillar-title">Optional interceptor carriage</h3>
-              <p class="pillar-text">The platform can carry or coordinate small interceptor UAVs in its gondola bay. Upon positive identification of a threat, interceptors can be launched directly from altitude, reducing response time from minutes to seconds.</p>
             </div>
           </div>
 
@@ -679,9 +673,9 @@
     <div class="sensors-inner">
 
       <div class="sensors-header">
-        <h2 class="sensors-headline reveal" data-delay="0.06">Multi-modal sensor fusion.</h2>
+        <h2 class="sensors-headline reveal" data-delay="0.06">Multi-modal sensor architecture.</h2>
         <p class="sensors-subheadline reveal" data-delay="0.2">
-          Three independent sensing layers. Each fills the gaps the others cannot.
+          The target architecture integrates three sensing layers. Each is designed to fill the gaps the others cannot.
         </p>
       </div>
 
@@ -703,7 +697,7 @@
           <div class="layer-body">
             <div class="layer-header-row">
               <span class="layer-tech">Downward-looking Radar · FMCW / Phased-array</span>
-              <span class="layer-tag tag-primary">PRIMARY · always active</span>
+              <span class="layer-tag tag-primary">PRIMARY · radar-first design</span>
             </div>
             <p class="layer-role">Primary detection. Detects ALL moving objects regardless of RF emissions. MTI filtering removes static clutter. Micro-Doppler distinguishes rotor harmonics from bird wing-flap.</p>
             <p class="layer-chars">Range 10–30 km · 24/7 all-weather · RF-silent capable</p>
@@ -797,9 +791,9 @@
           <div class="layer-body">
             <div class="layer-header-row">
               <span class="layer-tech">AI Decision Engine · Ensemble classifiers · Bayesian fusion</span>
-              <span class="layer-tag tag-synthesis">SYNTHESIS · always running</span>
+              <span class="layer-tag tag-synthesis">SYNTHESIS · target architecture</span>
             </div>
-            <p class="layer-role">All three sensor streams feed the AI pipeline simultaneously. Confidence-weighted fusion. Output: target class, confidence score, track state, CoT/SAPIENT output.</p>
+            <p class="layer-role">The architecture routes all three sensor streams into a shared AI pipeline. Confidence-weighted fusion produces target class, confidence score, and track state. CoT/SAPIENT output format is the design target for C2 integration.</p>
             <p class="layer-chars">Multi-hypothesis reasoning · Confidence scoring · C2 output</p>
           </div>
         </div>
@@ -814,7 +808,7 @@
     <div class="pipeline-inner">
 
       <p class="section-label reveal" data-delay="0.05">AI Classification Pipeline</p>
-      <h2 class="pipeline-headline reveal" data-delay="0.18">From radar return to classified threat in under 2 minutes.</h2>
+      <h2 class="pipeline-headline reveal" data-delay="0.18">Target pipeline: radar return to classified track in under 2 minutes.</h2>
       <p class="pipeline-intro reveal" data-delay="0.32">
         The pipeline follows established radar signal processing practice. Each stage maps to well-understood DSP and ML techniques, with no black boxes and no hand-waving.
       </p>
@@ -1074,7 +1068,7 @@
         </div>
         <div class="pipe-stat">
           <span class="pipe-stat-val">&gt;95%</span>
-          <span class="pipe-stat-lbl">UAV vs. bird (micro-Doppler, X-band)</span>
+          <span class="pipe-stat-lbl">UAV vs. bird (published benchmark, side-looking geometry — top-down validation pending)</span>
         </div>
         <div class="pipe-stat">
           <span class="pipe-stat-val">&lt;2 min</span>
